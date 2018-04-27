@@ -14,6 +14,8 @@ ModelImporter:
     100012: Ramp01
     100014: Ramp02
     100016: Skateboard
+    100018: Box007
+    100020: Box009
     400000: Ball01
     400002: Becher
     400004: Cube
@@ -23,7 +25,16 @@ ModelImporter:
     400012: Ramp01
     400014: Ramp02
     400016: Skateboard
+    400018: Box007
+    400020: Box009
     2100000: No Name
+    2100002: 'Material #48'
+    2100004: 'Material #49'
+    2100006: 09 - Default
+    2100008: 'Material #51'
+    2100010: 'Material #50'
+    2100012: 'Material #52'
+    2100014: 10 - Default
     2300000: Ball01
     2300002: Becher
     2300004: Cube
@@ -32,6 +43,8 @@ ModelImporter:
     2300010: Ramp01
     2300012: Ramp02
     2300014: Skateboard
+    2300016: Box007
+    2300018: Box009
     3300000: Ball01
     3300002: Becher
     3300004: Cube
@@ -40,6 +53,8 @@ ModelImporter:
     3300010: Ramp01
     3300012: Ramp02
     3300014: Skateboard
+    3300016: Box007
+    3300018: Box009
     4300000: Skateboard
     4300002: Pogostick
     4300004: Becher
@@ -48,6 +63,9 @@ ModelImporter:
     4300010: Curve
     4300012: Ball01
     4300014: Cube
+    4300016: Box007
+    4300018: Box009
+    7400000: Take 001
     9500000: //RootNode
   externalObjects: {}
   materials:

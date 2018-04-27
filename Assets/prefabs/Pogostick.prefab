@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 64358678598983662}
   - component: {fileID: 54398147595527704}
   m_Layer: 0
-  m_Name: Skateboard 5
+  m_Name: Pogostick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
