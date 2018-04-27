@@ -1,63 +1,16 @@
 fileFormatVersion: 2
-guid: 5e0abef6c8f9b464a9b63a11b889702c
-timeCreated: 1524830247
+guid: 23a952e6ab8967a4da9ef487ee96262a
+timeCreated: 1524833115
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: floor
-    100002: Line001
-    100004: //RootNode
-    100006: wall1
-    100008: wall2
-    100010: wall3
-    100012: wall4
-    100014: wall005
-    100016: wall006
-    100018: wall007
-    100020: wall008
-    400000: floor
-    400002: Line001
-    400004: //RootNode
-    400006: wall1
-    400008: wall2
-    400010: wall3
-    400012: wall4
-    400014: wall005
-    400016: wall006
-    400018: wall007
-    400020: wall008
+    100000: //RootNode
+    400000: //RootNode
     2100000: No Name
-    2300000: floor
-    2300002: Line001
-    2300004: wall1
-    2300006: wall2
-    2300008: wall3
-    2300010: wall4
-    2300012: wall005
-    2300014: wall006
-    2300016: wall007
-    2300018: wall008
-    3300000: floor
-    3300002: Line001
-    3300004: wall1
-    3300006: wall2
-    3300008: wall3
-    3300010: wall4
-    3300012: wall005
-    3300014: wall006
-    3300016: wall007
-    3300018: wall008
-    4300000: floor
-    4300002: wall2
-    4300004: wall1
-    4300006: wall3
-    4300008: wall4
-    4300010: Line001
-    4300012: wall005
-    4300014: wall006
-    4300016: wall007
-    4300018: wall008
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Line001
     9500000: //RootNode
   externalObjects: {}
   materials:
