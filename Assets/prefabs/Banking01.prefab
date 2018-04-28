@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23178267844680340}
   - component: {fileID: 64358678598983662}
   m_Layer: 0
-  m_Name: Curve
+  m_Name: Banking01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

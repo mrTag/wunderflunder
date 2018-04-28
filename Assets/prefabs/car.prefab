@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33208495328080334}
   - component: {fileID: 23213780373388548}
   - component: {fileID: 64474991170227976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: chassis_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4550727369286304}
   - component: {fileID: 95964883727656074}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4943528869839614}
   - component: {fileID: 54545049337213156}
   - component: {fileID: 114533627804109966}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4067573723663858}
   - component: {fileID: 146366402831988944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: wheelBR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,8 +88,23 @@ GameObject:
   - component: {fileID: 4160372395798362}
   - component: {fileID: 33268077658638052}
   - component: {fileID: 23588252834239628}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: chassis_hotrod
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1131665740197872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4268314921641124}
+  m_Layer: 9
+  m_Name: Spawnpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4583374464612312}
   - component: {fileID: 146871696483208082}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: wheelFL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +136,7 @@ GameObject:
   - component: {fileID: 4748378011582298}
   - component: {fileID: 33900892468407506}
   - component: {fileID: 23082648452345630}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: wheelRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4054676327791962}
   - component: {fileID: 146986953318538456}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: wheelBL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +169,7 @@ GameObject:
   - component: {fileID: 4719475042342116}
   - component: {fileID: 33503375400453608}
   - component: {fileID: 23952449982373194}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: chassis_sedan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +186,7 @@ GameObject:
   - component: {fileID: 4377894497730426}
   - component: {fileID: 33996386058230210}
   - component: {fileID: 23703193867242784}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: wheelRR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +203,7 @@ GameObject:
   - component: {fileID: 4453435351389904}
   - component: {fileID: 33592789205605906}
   - component: {fileID: 23791017613744732}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: wheelFR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4770943536029284}
   - component: {fileID: 146360172339939004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: wheelFR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +236,7 @@ GameObject:
   - component: {fileID: 4510585486937440}
   - component: {fileID: 33650175630014324}
   - component: {fileID: 23492253345220980}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: wheel_FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,6 +281,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4550727369286304}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4268314921641124
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1131665740197872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.28, z: 0.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4943528869839614}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4377894497730426
 Transform:
@@ -398,7 +426,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1062912392615222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 60.6, y: 2.11, z: -9.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4770943536029284}
@@ -406,6 +434,7 @@ Transform:
   - {fileID: 4067573723663858}
   - {fileID: 4054676327791962}
   - {fileID: 4550727369286304}
+  - {fileID: 4268314921641124}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -450,7 +479,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1038895007676986}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -768,7 +797,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47cd96f11692a654284a4177cae82f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Driver: 0
+  Spawnpoint: {fileID: 4268314921641124}
+  BabsiPrefab: {fileID: 1833454851847260, guid: 2e8715cc21f1a794bb16aae59ce70de9,
+    type: 2}
+  BobPrefab: {fileID: 1531891761489522, guid: ac0c5c1420beba54e8a137ebb15fd11c, type: 2}
   MotorTorque: 1500
+  ChassisBob: {fileID: 1514995386400440}
+  ChassisBabsi: {fileID: 1084305213677974}
 --- !u!146 &146360172339939004
 WheelCollider:
   m_ObjectHideFlags: 1
