@@ -22,6 +22,27 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 	void Awake() {
 		DontDestroyOnLoad(gameObject);
 		SetState(GameState.MainMenu);
+	} 
+
+	public void SetGameState(GameState NewGameState) {
+		
+		switch(NewGameState) {
+			case GameState.Playing:
+				SceneManager.LoadScene(LevelScenes[_currentLevelIndex], LoadSceneMode.Single);
+				SceneManager.LoadScene("DynamicObjects", LoadSceneMode.Additive);
+				ExecutionDelayer.Instance.ExecuteNextFrame(() => {
+					SceneManager.SetActiveScene(SceneManager.GetSceneByName("DynamicObjects"));
+					SetState(GameState.PlacingObjects);
+					var campos = GameObject.FindWithTag("campos");
+					if (campos != null) {
+						CamPan.transform.position = campos.transform.position;
+					}
+				});
+			
+			break;
+		}
+
+		_currentState = NewGameState;
 	}
 
 	void Update () {
