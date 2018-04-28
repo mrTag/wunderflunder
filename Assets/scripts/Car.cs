@@ -23,13 +23,12 @@ public class Car : MonoBehaviour {
 		_wheelColliders = GetComponentsInChildren<WheelCollider>();
 		switch (Driver) {
 			case DriverType.Babsi:
-				GameObject Babsi = Instantiate(BabsiPrefab, Spawnpoint,false);
-				
+				GameObject Babsi = Instantiate(BabsiPrefab, Spawnpoint.transform.position, Spawnpoint.transform.rotation);
 				ChassisBob.SetActive(false);
 				ChassisBabsi.SetActive(true);
 			break;
 			case DriverType.Bob:				
-				GameObject Bob = Instantiate(BobPrefab, Spawnpoint,false);
+				GameObject Bob = Instantiate(BobPrefab, Spawnpoint.transform.position, Spawnpoint.transform.rotation);
 
 				ChassisBob.SetActive(true);
 				ChassisBabsi.SetActive(false);
