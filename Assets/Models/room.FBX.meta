@@ -1,83 +1,80 @@
 fileFormatVersion: 2
-guid: feff5b2df88e2ee4680f5e2f69a07e34
-timeCreated: 1524860897
+guid: a98d625294125da4983812b0ccf4a4bc
+timeCreated: 1524898285
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Ball01
-    100002: Becher
-    100004: Cube
-    100006: Curve
-    100008: //RootNode
-    100010: Pogostick
-    100012: Ramp01
-    100014: Ramp02
-    100016: Skateboard
-    100018: Box007
-    100020: Box009
-    100022: FlipperBot
-    100024: FlipperParent
-    100026: FlipperTop
-    400000: Ball01
-    400002: Becher
-    400004: Cube
-    400006: Curve
-    400008: //RootNode
-    400010: Pogostick
-    400012: Ramp01
-    400014: Ramp02
-    400016: Skateboard
-    400018: Box007
-    400020: Box009
-    400022: FlipperBot
-    400024: FlipperParent
-    400026: FlipperTop
+    100000: Becher
+    100002: Bett
+    100004: Floor
+    100006: Kiste
+    100008: Komode
+    100010: Nachttisch
+    100012: Pogostick
+    100014: Puppenregal
+    100016: //RootNode
+    100018: Skateboard
+    100020: Spielteppich
+    100022: Stuhl
+    100024: Tisch
+    100026: Wall
+    400000: Becher
+    400002: Bett
+    400004: Floor
+    400006: Kiste
+    400008: Komode
+    400010: Nachttisch
+    400012: Pogostick
+    400014: Puppenregal
+    400016: //RootNode
+    400018: Skateboard
+    400020: Spielteppich
+    400022: Stuhl
+    400024: Tisch
+    400026: Wall
     2100000: No Name
-    2100002: 'Material #48'
-    2100004: 'Material #49'
-    2100006: 09 - Default
-    2100008: 'Material #51'
-    2100010: 'Material #50'
-    2100012: 'Material #52'
-    2100014: 10 - Default
-    2300000: Ball01
-    2300002: Becher
-    2300004: Cube
-    2300006: Curve
-    2300008: Pogostick
-    2300010: Ramp01
-    2300012: Ramp02
-    2300014: Skateboard
-    2300016: Box007
-    2300018: Box009
-    2300020: FlipperBot
-    2300022: FlipperTop
-    3300000: Ball01
-    3300002: Becher
-    3300004: Cube
-    3300006: Curve
-    3300008: Pogostick
-    3300010: Ramp01
-    3300012: Ramp02
-    3300014: Skateboard
-    3300016: Box007
-    3300018: Box009
-    3300020: FlipperBot
-    3300022: FlipperTop
-    4300000: Skateboard
-    4300002: Pogostick
-    4300004: Becher
-    4300006: Ramp01
-    4300008: Ramp02
-    4300010: Curve
-    4300012: Ball01
-    4300014: Cube
-    4300016: Box007
-    4300018: Box009
-    4300020: FlipperBot
-    4300022: FlipperTop
-    7400000: Take 001
+    2100002: 02 - Default
+    2100004: 01 - Default
+    2300000: Becher
+    2300002: Bett
+    2300004: Floor
+    2300006: Kiste
+    2300008: Komode
+    2300010: Nachttisch
+    2300012: Pogostick
+    2300014: Puppenregal
+    2300016: Skateboard
+    2300018: Spielteppich
+    2300020: Stuhl
+    2300022: Tisch
+    2300024: Wall
+    3300000: Becher
+    3300002: Bett
+    3300004: Floor
+    3300006: Kiste
+    3300008: Komode
+    3300010: Nachttisch
+    3300012: Pogostick
+    3300014: Puppenregal
+    3300016: Skateboard
+    3300018: Spielteppich
+    3300020: Stuhl
+    3300022: Tisch
+    3300024: Wall
+    4300000: Bett
+    4300002: Komode
+    4300004: Nachttisch
+    4300006: Kiste
+    4300008: Spielteppich
+    4300010: Skateboard
+    4300012: Puppenregal
+    4300014: Tisch
+    4300016: Stuhl
+    4300018: Wall
+    4300020: Floor
+    4300022: Pogostick
+    4300024: Becher
     9500000: //RootNode
   externalObjects: {}
   materials:
