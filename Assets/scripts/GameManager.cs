@@ -30,6 +30,7 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 	public ObjectPlacementSystem ObjectPlacement;
 	public CamPan CamPan;
 	public IngameUI IngameUI;
+	public OrbitCam OrbitCamPrefab;
 
 	private GameState _currentState;
 	private int _currentLevelIndex;
@@ -39,6 +40,7 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 	void Start() {
 		DontDestroyOnLoad(gameObject);
 		ObjectPlacement.OnObjectPlaced += CurrentObjectPlaced;
+		Barbie.OnBarbiesTouched += BarbiesTouched;
 		SetState(GameState.MainMenu);
 	} 
 
@@ -61,7 +63,13 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 				}
 			break;
 			case GameState.SuccessfulEnd:
-
+				if(Input.GetKeyDown(KeyCode.Return)){
+					if(_currentLevelIndex < Levels.Length){
+						LoadLevel(_currentLevelIndex+1);
+					} else {
+						SetState(GameState.MainMenu);
+					}
+				}
 			break;
 		}
 	}
@@ -128,6 +136,10 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
                 IngameUI.SetPlayingState();
 				Time.timeScale = 1;
 			break;
+			case GameState.SuccessfulEnd:
+				Time.timeScale = 0;
+				// show message!
+			break;
 		}
 		_currentState = state;
 	}
@@ -148,6 +160,13 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
             IngameUI.SetObjectCount(_currentPlacementObjIndex, temp.Count);
 			_currentObjectList[_currentPlacementObjIndex] = temp;
 			_currentPlacementObjIndex = -1;
+		}
+	}
+
+	private void BarbiesTouched(Vector3 worldpos) {
+		if(_currentState == GameState.Playing){
+			SetState(GameState.SuccessfulEnd);
+			Instantiate(OrbitCamPrefab, worldpos, Quaternion.identity);
 		}
 	}
 
