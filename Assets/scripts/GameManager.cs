@@ -36,7 +36,7 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 	private List<ObjectData> _currentObjectList = new List<ObjectData>();
 	private int _currentPlacementObjIndex;
 
-	void Awake() {
+	void Start() {
 		DontDestroyOnLoad(gameObject);
 		ObjectPlacement.OnObjectPlaced += CurrentObjectPlaced;
 		SetState(GameState.MainMenu);
@@ -47,7 +47,7 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 			case GameState.MainMenu:
 				if(Input.GetKeyDown(KeyCode.F5)){
                     LoadLevel(0);
-					ExecutionDelayer.Instance.ExecuteNextFrame(() => SetState(GameState.PlacingObjects));
+					
 				}
 			break;
 			case GameState.PlacingObjects:
@@ -89,6 +89,7 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
                 CamPan.transform.position = campos.transform.position;
             }
         });
+		ExecutionDelayer.Instance.ExecuteNextFrame(() => SetState(GameState.PlacingObjects));
 	}
 
 	public void SetState(GameState state){
