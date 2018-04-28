@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ObjectPlacementSystem : MonoBehaviour {
 
 	public float RotationSpeed = 80.0f;
-	public GameObject[] ObjectPrefabs;
 
 	private PlacementObject _currentlyActiveObject;
 	private Camera _cam;
@@ -13,20 +13,12 @@ public class ObjectPlacementSystem : MonoBehaviour {
 	private bool _currentlyDragging;
 	private bool _disabled = false;
 	private List<PlacementObject> _placedObjects = new List<PlacementObject>();
+
+	public System.Action OnObjectPlaced = delegate {};
 	
 	void Update () {
 		if(_disabled) return;
-		if(Input.GetKeyDown(KeyCode.F1)){
-			if(_currentlyActiveObject != null) {
-				Destroy(_currentlyActiveObject.gameObject);
-			}
-            var prefab = ObjectPrefabs[Random.Range(0, ObjectPrefabs.Length)];
-			var newObject = Instantiate(prefab);
-			_currentlyActiveObject = newObject.AddComponent<PlacementObject>();
-			_currentlyActiveObject.CreatedFromPrefab = prefab;
-			_currentlyActiveObject.SetInPlacementState();
-		}
-		if(Input.GetKeyDown(KeyCode.F2)) {
+        if (Input.GetKeyDown(KeyCode.F2)) {
             EndPlacement();
         }
         if (_currentlyActiveObject != null){
@@ -48,6 +40,7 @@ public class ObjectPlacementSystem : MonoBehaviour {
 						placedObject.SetInPlacedState();
 						_placedObjects.Add(placedObject);
 						EndPlacement();
+						OnObjectPlaced();
 					}
 				}
 			} else {
@@ -65,7 +58,17 @@ public class ObjectPlacementSystem : MonoBehaviour {
 		}
 	}
 
-    private void EndPlacement()
+    public void StartPlacement(GameObject prefab){
+        if (_currentlyActiveObject != null){
+            Destroy(_currentlyActiveObject.gameObject);
+        }
+        var newObject = Instantiate(prefab);
+        _currentlyActiveObject = newObject.AddComponent<PlacementObject>();
+        _currentlyActiveObject.CreatedFromPrefab = prefab;
+        _currentlyActiveObject.SetInPlacementState();
+    }
+
+    public void EndPlacement()
     {
         if (_currentlyActiveObject != null)
         {
