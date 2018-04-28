@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: e733484d1de979f43aadd911f88f711d
+  - enabled: 1
+    path: Assets/Scenes/Assembly_Room.unity
+    guid: 8305cc9108571fa4d8623562e71e00f2
+  - enabled: 1
+    path: Assets/Scenes/DynamicObjects.unity
+    guid: 4a641ecf83df0a042a9c03c650e2d602
