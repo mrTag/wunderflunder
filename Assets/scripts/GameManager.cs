@@ -31,6 +31,10 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 	public CamPan CamPan;
 	public IngameUI IngameUI;
 	public OrbitCam OrbitCamPrefab;
+	public AudioSource MusicSource;
+	public AudioClip PlayMusic;
+	public AudioClip PlacementMusic;
+	public AudioSource SFXSource;
 
 	private GameState _currentState;
 	private int _currentLevelIndex;
@@ -41,6 +45,23 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 		DontDestroyOnLoad(gameObject);
 		ObjectPlacement.OnObjectPlaced += CurrentObjectPlaced;
 		Barbie.OnBarbiesTouched += BarbiesTouched;
+		IngameUI.PlayButton.onClick.AddListener(() => {
+			if(_currentState == GameState.PlacingObjects){
+				SetState(GameState.Playing);
+			} else if(_currentState == GameState.Playing) {
+				Time.timeScale = 1;
+			}
+		});
+		IngameUI.StopButton.onClick.AddListener(() => {
+			if(_currentState == GameState.Playing){
+				SetState(GameState.PlacingObjects);
+			}
+		});
+		IngameUI.PauseButton.onClick.AddListener(() => {
+			if(_currentState == GameState.Playing){
+				Time.timeScale = 0;
+			}
+		});
 		SetState(GameState.MainMenu);
 	} 
 
@@ -64,7 +85,7 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 			break;
 			case GameState.SuccessfulEnd:
 				if(Input.GetKeyDown(KeyCode.Return)){
-					if(_currentLevelIndex < Levels.Length){
+					if(_currentLevelIndex < Levels.Length-1){
 						LoadLevel(_currentLevelIndex+1);
 					} else {
 						SetState(GameState.MainMenu);
@@ -95,6 +116,7 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
             if (campos != null)
             {
                 CamPan.transform.position = campos.transform.position;
+				CamPan.transform.eulerAngles = new Vector3(CamPan.transform.eulerAngles.x, campos.transform.eulerAngles.y, 0);
             }
         });
 		ExecutionDelayer.Instance.ExecuteNextFrame(() => SetState(GameState.PlacingObjects));
@@ -105,10 +127,15 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 			case GameState.MainMenu:
 				SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
 				CamPan.DisableCamPan();
+				transform.position = Vector3.zero;
+				transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, 0);
 				ObjectPlacement.DisableObjectPlacement();
 				ObjectPlacement.ClearPlacedObjects();
-				IngameUI.gameObject.SetActive(false);
+				IngameUI.ActivateElements(false, false, false, false);
 				IngameUI.ClearList();
+				MusicSource.clip = PlayMusic;
+				MusicSource.Play();
+				Time.timeScale = 1;
 				break;
 			case GameState.PlacingObjects:
 				if(_currentState == GameState.Playing){
@@ -122,8 +149,9 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 				}
 				ObjectPlacement.EnableObjectPlacement();
 				CamPan.EnableCamPan();
-                IngameUI.gameObject.SetActive(true);
-				IngameUI.SetPlacingState();
+                IngameUI.ActivateElements(true, true, false, false);
+                MusicSource.clip = PlacementMusic;
+				MusicSource.Play();
                 Time.timeScale = 0;
 			break;
 			case GameState.Playing:
@@ -132,13 +160,18 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 				}
 				ObjectPlacement.DisableObjectPlacement();
 				CamPan.EnableCamPan();
-                IngameUI.gameObject.SetActive(true);
-                IngameUI.SetPlayingState();
+                IngameUI.ActivateElements(false, true, false, false);
+                MusicSource.clip = PlayMusic;
+				MusicSource.Play();
 				Time.timeScale = 1;
 			break;
 			case GameState.SuccessfulEnd:
 				Time.timeScale = 0;
-				// show message!
+                if (_currentLevelIndex < Levels.Length - 1) {
+                    IngameUI.ActivateElements(false, false, true, false);
+                } else {
+                    IngameUI.ActivateElements(false, false, false, true);
+                }
 			break;
 		}
 		_currentState = state;
@@ -165,6 +198,7 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 
 	private void BarbiesTouched(Vector3 worldpos) {
 		if(_currentState == GameState.Playing){
+			SFXSource.Play();
 			SetState(GameState.SuccessfulEnd);
 			Instantiate(OrbitCamPrefab, worldpos, Quaternion.identity);
 		}

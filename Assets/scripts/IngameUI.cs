@@ -11,6 +11,16 @@ public class IngameUI : MonoBehaviour {
 	public GameObject EndScreen_NextLevel;
 	public GameObject EndScreen_EndGame;
 	public GameObject ControlPanel;
+	public UnityEngine.UI.Button PlayButton;
+    public UnityEngine.UI.Button StopButton;
+    public UnityEngine.UI.Button PauseButton;
+
+	public void ActivateElements(bool objectList, bool controlPanel, bool endScreenNext, bool endScreenEnd){
+		HideWhilePlaying.gameObject.SetActive(objectList);
+		ControlPanel.gameObject.SetActive(controlPanel);
+		EndScreen_NextLevel.SetActive(endScreenNext);
+		EndScreen_EndGame.SetActive(endScreenEnd);
+	}
 
 	public void AddObject(Sprite objectImage, int count, System.Action clickedAction) {
 		var obj = Instantiate(ObjectPrefab);
@@ -31,13 +41,5 @@ public class IngameUI : MonoBehaviour {
 
 	public void SetObjectCount(int objIndex, int count){
 		_listObjects[objIndex].SetCount(count);
-	}
-	
-	public void SetPlayingState(){
-		HideWhilePlaying.SetActive(false);
-	}
-
-	public void SetPlacingState(){
-		HideWhilePlaying.SetActive(true);
 	}
 }
