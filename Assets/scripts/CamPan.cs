@@ -9,15 +9,18 @@ public class CamPan : MonoBehaviour {
 
 	private Transform _cameraTransform;
 	private bool _panning;
+	private bool _disabled = false;
 	private Vector3 _panStartScreenPos;
 	private Vector3 _panStartWorldPos;
 
 	void Awake () {
 		_cameraTransform = transform.GetChild(0);
 		_panning = false;
+		DontDestroyOnLoad(gameObject);
 	}
 	
 	void Update () {
+		if(_disabled) return;
 		if(!_panning){
 			if(Input.GetMouseButton(PanMouseButton)) {
 				_panning = true;
@@ -37,5 +40,23 @@ public class CamPan : MonoBehaviour {
 				transform.position = _panStartWorldPos + worldOffset;
 			}
 		}
+
+		if(Input.mouseScrollDelta.y != 0){
+			_cameraTransform.localPosition += new Vector3(0,0,Input.mouseScrollDelta.y * Time.unscaledDeltaTime * 100);
+			if(_cameraTransform.localPosition.z < -40) {
+				_cameraTransform.localPosition = new Vector3(_cameraTransform.localPosition.x, _cameraTransform.localPosition.y, -40);
+			} else if(_cameraTransform.localPosition.z > -8) {
+				_cameraTransform.localPosition = new Vector3(_cameraTransform.localPosition.x, _cameraTransform.localPosition.y, -8);
+			}
+		}
+	}
+
+	public void DisableCamPan() {
+		_disabled = true;
+		_panning = false;
+	}
+
+	public void EnableCamPan() {
+		_disabled = false;
 	}
 }
