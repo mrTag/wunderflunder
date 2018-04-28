@@ -97,6 +97,7 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 
 	public void LoadLevel(int levelIndex){
 		_currentLevelIndex = levelIndex;
+        ObjectPlacement.ClearPlacedObjects();
 		IngameUI.ClearList();
 		_currentObjectList.Clear();
 		_currentObjectList.AddRange(Levels[_currentLevelIndex].Objects);
@@ -139,6 +140,9 @@ public class GameManager : GenericSingletonBehaviour<GameManager> {
 				break;
 			case GameState.PlacingObjects:
 				if(_currentState == GameState.Playing){
+					foreach(var barb in GameObject.FindObjectsOfType<Barbie>()){
+						Destroy(barb.gameObject);
+					}
 					ObjectPlacement.RestorePlacedObjectState();
                     var currentActiveLevelScene = SceneManager.GetSceneByName(Levels[_currentLevelIndex].SceneName);
 					SceneManager.LoadScene(Levels[_currentLevelIndex].SceneName, LoadSceneMode.Additive);
