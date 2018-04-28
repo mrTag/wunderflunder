@@ -36,6 +36,9 @@ ModelImporter:
     2100000: No Name
     2100002: 02 - Default
     2100004: 01 - Default
+    2100006: 'Material #22'
+    2100008: 'Material #23'
+    2100010: 'Material #25'
     2300000: Becher
     2300002: Bett
     2300004: Floor
@@ -75,6 +78,16 @@ ModelImporter:
     4300020: Floor
     4300022: Pogostick
     4300024: Becher
+    6400000: Bett
+    6400002: Floor
+    6400004: Kiste
+    6400006: Komode
+    6400008: Nachttisch
+    6400010: Puppenregal
+    6400012: Spielteppich
+    6400014: Stuhl
+    6400016: Tisch
+    6400018: Wall
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -108,7 +121,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
