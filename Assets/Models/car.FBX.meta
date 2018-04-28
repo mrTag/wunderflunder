@@ -13,6 +13,7 @@ ModelImporter:
     100010: wheelRR
     100012: chassis_hotrod
     100014: chassis_sedan
+    100016: chassis_collider
     400000: Box007
     400002: //RootNode
     400004: wheel_FL
@@ -21,6 +22,7 @@ ModelImporter:
     400010: wheelRR
     400012: chassis_hotrod
     400014: chassis_sedan
+    400016: chassis_collider
     2100000: 'Material #48'
     2100002: 'Material #49'
     2100004: 09 - Default
@@ -29,6 +31,7 @@ ModelImporter:
     2100010: 'Material #52'
     2100012: 10 - Default
     2100014: 'Material #53'
+    2100016: collider
     2300000: Box007
     2300002: wheel_FL
     2300004: wheelFR
@@ -36,6 +39,7 @@ ModelImporter:
     2300008: wheelRR
     2300010: chassis_hotrod
     2300012: chassis_sedan
+    2300014: chassis_collider
     3300000: Box007
     3300002: wheel_FL
     3300004: wheelFR
@@ -43,6 +47,7 @@ ModelImporter:
     3300008: wheelRR
     3300010: chassis_hotrod
     3300012: chassis_sedan
+    3300014: chassis_collider
     4300000: Box007
     4300002: wheelRL
     4300004: wheelFR
@@ -50,6 +55,7 @@ ModelImporter:
     4300008: wheelRR
     4300010: chassis_hotrod
     4300012: chassis_sedan
+    4300014: chassis_collider
     9500000: //RootNode
   externalObjects: {}
   materials:
