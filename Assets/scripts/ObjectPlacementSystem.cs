@@ -26,13 +26,10 @@ public class ObjectPlacementSystem : MonoBehaviour {
 			_currentlyActiveObject.CreatedFromPrefab = prefab;
 			_currentlyActiveObject.SetInPlacementState();
 		}
-		if(Input.GetKeyDown(KeyCode.F2)){
-            if (_currentlyActiveObject != null) {
-                Destroy(_currentlyActiveObject.gameObject);
-				_currentlyActiveObject = null;
-            }
-		}
-		if(_currentlyActiveObject != null){
+		if(Input.GetKeyDown(KeyCode.F2)) {
+            EndPlacement();
+        }
+        if (_currentlyActiveObject != null){
 			if(Input.GetAxisRaw("Rotate") != 0){
 				_currentlyActiveObject.transform.Rotate(Vector3.up, RotationSpeed* Time.unscaledDeltaTime * Input.GetAxisRaw("Rotate"));
 			}
@@ -50,6 +47,7 @@ public class ObjectPlacementSystem : MonoBehaviour {
 						var placedObject = Instantiate(_currentlyActiveObject);
 						placedObject.SetInPlacedState();
 						_placedObjects.Add(placedObject);
+						EndPlacement();
 					}
 				}
 			} else {
@@ -67,7 +65,16 @@ public class ObjectPlacementSystem : MonoBehaviour {
 		}
 	}
 
-	bool updateRaycastHit() {
+    private void EndPlacement()
+    {
+        if (_currentlyActiveObject != null)
+        {
+            Destroy(_currentlyActiveObject.gameObject);
+            _currentlyActiveObject = null;
+        }
+    }
+
+    bool updateRaycastHit() {
 		if(!_cam) _cam = Camera.main;
 
 		Ray screenRay = _cam.ScreenPointToRay(Input.mousePosition);
