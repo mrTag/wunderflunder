@@ -17,7 +17,7 @@ public class ButtonAnim : MonoBehaviour {
 	public void ButtonPressed() {
 		Icon.transform.DOKill();
 		Icon.transform.localPosition= IconStartPos;
-		Icon.transform.DOPunchPosition(new Vector3(5,-5,0),0.2f,2).OnComplete(ShowShadow);
+		Icon.transform.DOPunchPosition(new Vector3(5,-5,0),0.2f,2).OnComplete(ShowShadow).SetUpdate(true);
 		IconShadow.enabled = false;
 	}
 
