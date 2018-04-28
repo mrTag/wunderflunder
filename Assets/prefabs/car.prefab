@@ -398,7 +398,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1062912392615222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 58.4, y: 0.00000070966775, z: -6.594708}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4770943536029284}
@@ -718,7 +718,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1062912392615222}
   serializedVersion: 2
-  m_Mass: 500
+  m_Mass: 200
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -768,7 +768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47cd96f11692a654284a4177cae82f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MotorTorque: 1500
+  MotorTorque: 1000
 --- !u!146 &146360172339939004
 WheelCollider:
   m_ObjectHideFlags: 1
