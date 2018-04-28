@@ -213,6 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4261761612100624}
   - component: {fileID: 95445531630828416}
+  - component: {fileID: 114052425237572836}
   m_Layer: 10
   m_Name: bob
   m_TagString: Untagged
@@ -1095,6 +1096,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114052425237572836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1531891761489522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e144abf137d72d840bc264546b41ca97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135575736684288968
 SphereCollider:
   m_ObjectHideFlags: 1

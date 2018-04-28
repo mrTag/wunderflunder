@@ -432,6 +432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4510794209080482}
   - component: {fileID: 95801082324233376}
+  - component: {fileID: 114816721387109326}
   m_Layer: 10
   m_Name: babsi
   m_TagString: Untagged
@@ -1286,6 +1287,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114816721387109326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1833454851847260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e144abf137d72d840bc264546b41ca97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135049442046315646
 SphereCollider:
   m_ObjectHideFlags: 1
