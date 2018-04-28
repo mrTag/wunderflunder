@@ -19,11 +19,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4038968081170294}
-  - component: {fileID: 33495563398025686}
-  - component: {fileID: 23992446291235116}
-  - component: {fileID: 64721616819991920}
+  - component: {fileID: 33455018023676370}
+  - component: {fileID: 23962079327968560}
+  - component: {fileID: 64371456174899346}
   m_Layer: 0
-  m_Name: Ramp01
+  m_Name: Ramp03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,13 +36,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1180765178481130}
   m_LocalRotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.9, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23992446291235116
+--- !u!23 &23962079327968560
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -56,11 +56,9 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 43b9da6b8747dd848b47ce07e450458a, type: 2}
-  - {fileID: 2100000, guid: 0aebaafb8e9fdfc4489d92714ea432e5, type: 2}
   - {fileID: 2100000, guid: 14d2d0e5de5fa8c419be464cc2360a61, type: 2}
+  - {fileID: 2100000, guid: 0aebaafb8e9fdfc4489d92714ea432e5, type: 2}
   - {fileID: 2100000, guid: 5c96cb8a9c0305344add8f82cde6257d, type: 2}
-  - {fileID: 2100000, guid: a319459efa94b134baca9186f0047583, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,14 +78,14 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33495563398025686
+--- !u!33 &33455018023676370
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1180765178481130}
-  m_Mesh: {fileID: 4300000, guid: 3b95243c6a9f3764389c182e545af284, type: 3}
---- !u!64 &64721616819991920
+  m_Mesh: {fileID: 4300008, guid: 3b95243c6a9f3764389c182e545af284, type: 3}
+--- !u!64 &64371456174899346
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -100,4 +98,4 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 3b95243c6a9f3764389c182e545af284, type: 3}
+  m_Mesh: {fileID: 4300008, guid: 3b95243c6a9f3764389c182e545af284, type: 3}
