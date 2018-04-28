@@ -6,15 +6,40 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: StartRampe
+    100004: StartRampe2
+    100006: Box008
+    100008: Cube
+    100010: Ramp03
     400000: //RootNode
+    400002: StartRampe
+    400004: StartRampe2
+    400006: Box008
+    400008: Cube
+    400010: Ramp03
     2100000: 'Material #66'
     2100002: 'Material #64'
     2100004: 'Material #65'
     2100006: 'Material #68'
     2100008: 'Material #67'
+    2100010: No Name
     2300000: //RootNode
+    2300002: StartRampe
+    2300004: StartRampe2
+    2300006: Box008
+    2300008: Cube
+    2300010: Ramp03
     3300000: //RootNode
+    3300002: StartRampe
+    3300004: StartRampe2
+    3300006: Box008
+    3300008: Cube
+    3300010: Ramp03
     4300000: StartRampe
+    4300002: StartRampe2
+    4300004: Cube
+    4300006: Box008
+    4300008: Ramp03
     9500000: //RootNode
   externalObjects: {}
   materials:
