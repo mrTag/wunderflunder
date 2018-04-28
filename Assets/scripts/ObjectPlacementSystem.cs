@@ -48,7 +48,7 @@ public class ObjectPlacementSystem : MonoBehaviour {
 			}
 		} else {
 			if(Input.GetMouseButtonDown(0) && updateRaycastHit()) {
-				var placedObject = _lastHit.collider.GetComponent<PlacementObject>();
+				var placedObject = _lastHit.collider.GetComponentInParent<PlacementObject>();
 				if(placedObject != null){
 					_currentlyActiveObject = placedObject;
 					_currentlyActiveObject.SetInPlacementState();
