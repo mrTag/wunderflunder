@@ -8,6 +8,9 @@ public class IngameUI : MonoBehaviour {
 	public GameObject HideWhilePlaying;
 	public ListObject ObjectPrefab;
 	private List<ListObject> _listObjects = new List<ListObject>();
+	public GameObject EndScreen_NextLevel;
+	public GameObject EndScreen_EndGame;
+	public GameObject ControlPanel;
 
 	public void AddObject(Sprite objectImage, int count, System.Action clickedAction) {
 		var obj = Instantiate(ObjectPrefab);

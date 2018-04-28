@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - campos
+  - barbie
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - 
   - 
   - ShadowCaster
-  - 
-  - 
+  - Cars
+  - Characters
   - 
   - 
   - 
