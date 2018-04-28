@@ -5,6 +5,6 @@ using UnityEngine;
 public class SwitchGameState : MonoBehaviour {
 
 	public void SetGameState_Playing() {
-		GameManager.Instance.SetGameState(GameState.Playing);
+		GameManager.Instance.LoadLevel(0);
 	}
 }
